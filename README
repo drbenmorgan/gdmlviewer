@@ -1,0 +1,72 @@
+# gdmlview version 0.1.0
+=======================
+
+Copyright (C) 2010 Ben Morgan <Ben.Morgan@warwick.ac.uk>
+Copyright (C) 2010 University of Warwick
+
+
+# License Information
+=======================
+
+See the file "LICENSE" for terms and conditions of usage.
+
+
+# INSTALLATION
+================
+gdmlview requires the following packages to be installed:
+
+CMake 2.6 or later (for build only)
+Geant4 9.3 or later
+Boost (any version supporting program_options)
+
+gdmlview's CMake build system requires an out-of-source build, so once you
+have unpacked the source bundle, create a directory somewhere outside of the
+directory where this README is located. For instance, if you unpacked to
+
+/path/to/gdmlview-0.1.0
+
+then you could create a build directory
+
+/path/to/build-gdmlview-0.1.0
+
+Inside this directory, run cmake and point it to the directory in which this
+README is located. For example, using the directories as above, you should do
+
+ cd /path/to/build-gdmlview-0.1.0
+ cmake ../gdmlview-0.1.0
+
+This will run CMake to generate, in this case, UNIX makefiles for building
+the gdmlview app. Once this has run, simply type
+
+ make
+
+to build the app. Because gdmlview is not currently designed as an installable
+program, it is output to 
+
+outputs/runtime/gdmlview
+
+under the build directory.
+
+It can be run directly from this location.
+
+
+# Running gdmlview
+====================
+To run, simply cd to the outputs/runtime directory under your build directory
+and execute the app, or use the full/relative path from another working
+directory, passing it the gdml file you wish to view, i.e
+
+ gdmlview mygdmlfile.gdml
+
+This will start up a Geant4 Qt/GL session, displaying the file in a rotatable,
+pannable and zoomable OpenGL window. The Qt session allows standard Geant4
+commands to be entered. Simple transportation and Geantinos are enabled, with
+a GPS generator, so you can track geantinos through your geometry if required.
+
+Should problems with the gdml file or session be encounter, gdmlview should
+exit with a (hopefully informative) error message.
+
+
+
+
+
