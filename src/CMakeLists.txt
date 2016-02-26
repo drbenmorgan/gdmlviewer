@@ -26,7 +26,7 @@ include_directories(${Boost_INCLUDE_DIR})
 #
 # Select the available sessions and visualizations to add
 #
-include(${GEANT4_USE_FILE})
+include(${Geant4_USE_FILE})
 
 add_executable(gdmlview ${GDMLVIEW_MAIN_APP} ${GDMLVIEW_COMPONENT_SOURCES})
 target_link_libraries(gdmlview
